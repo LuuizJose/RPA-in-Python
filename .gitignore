@@ -16,7 +16,7 @@ class ChromeAuto:
     def exit(self):
         self.chrome.quit()
 
-    #n
+    
     def login(self, login):
         try:
             input_login = self.chrome.find_element(by=By.XPATH, value='//*[@id="i0116"]')
@@ -38,12 +38,11 @@ class ChromeAuto:
         button_login = self.chrome.find_element(by=By.XPATH, value='//*[@id="organic-div"]/form/div[3]/button')
         button_login.click()
 
-    #Clica em qualquer botão
     def click_generic_button(self, var):
         button_generic = self.chrome.find_element(by=By.XPATH, value=var)
         button_generic.click()
 
-#Instancia dos obejtos
+
 if __name__ == '__main__':
     chrome = ChromeAuto()
 
